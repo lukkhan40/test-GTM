@@ -2,15 +2,12 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
-import { Root } from "./routes/root";
-import { ErrorPage } from "./routes/error";
-import { Event } from "./routes/event";
-import { Purchase } from "./routes/purchase";
+import { Home, ErrorPage, Event, Purchase } from "./components";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Root />,
+    element: <Home />,
     errorElement: <ErrorPage />,
   },
   {
