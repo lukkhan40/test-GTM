@@ -5,13 +5,8 @@ export const Event = () => {
   return (
     <div>
       <Helmet>
-        <meta property="og:type" content="webpage" />
         <title>Event</title>
         <meta property="og:title" content="Event" />
-        <meta
-          property="og:url"
-          content="https://test-gtm-prerender.netlify.app"
-        />
         <meta
           property="og:image"
           content="https://boletomovil.s3.amazonaws.com/boletos/events/event_1625829591856"
