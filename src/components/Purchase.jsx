@@ -7,7 +7,7 @@ export const Purchase = () => {
       <Helmet>
         <meta property="og:type" content="webpage" />
         <title>Purchase</title>
-        <meta property="og:title" content="Main" />
+        <meta property="og:title" content="Purchase" />
         <meta
           property="og:url"
           content="https://test-gtm-prerender.netlify.app"
@@ -16,7 +16,7 @@ export const Purchase = () => {
           property="og:image"
           content="https://boletomovil.com/baseballMovil.jpg"
         />
-        <meta name="description" content="Purchase" />
+        <meta name="description" content="Purchase description" />
         <meta property="og:description" content="Purchase description" />
       </Helmet>
       page purchase

@@ -26,15 +26,15 @@ export const Home = () => {
       {selectedImage && (
         <Helmet>
           <meta property="og:type" content="webpage" />
-          <title>Main</title>
-          <meta property="og:title" content="Main" />
+          <title>Home</title>
+          <meta property="og:title" content="Home" />
           <meta
             property="og:url"
             content="https://test-gtm-prerender.netlify.app"
           />
           <meta name="image" content={selectedImage} />
           <meta property="og:image" content={selectedImage} />
-          <meta name="description" content="Home" />
+          <meta name="description" content="Descripcion del Home, test" />
           <meta
             property="og:description"
             content="Descripcion del Home, test"
