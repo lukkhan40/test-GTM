@@ -23,19 +23,24 @@ export const Home = () => {
 
   return (
     <>
-      <Helmet>
-        <meta property="og:type" content="webpage" />
-        <title>Main</title>
-        <meta property="og:title" content="Main" />
-        <meta
-          property="og:url"
-          content="https://test-gtm-prerender.netlify.app"
-        />
-        <meta name="image" content={selectedImage} />
-        <meta property="og:image" content={selectedImage} />
-        <meta name="description" content="Home" />
-        <meta property="og:description" content="Descripcion del Home, test" />
-      </Helmet>
+      {selectedImage && (
+        <Helmet>
+          <meta property="og:type" content="webpage" />
+          <title>Main</title>
+          <meta property="og:title" content="Main" />
+          <meta
+            property="og:url"
+            content="https://test-gtm-prerender.netlify.app"
+          />
+          <meta name="image" content={selectedImage} />
+          <meta property="og:image" content={selectedImage} />
+          <meta name="description" content="Home" />
+          <meta
+            property="og:description"
+            content="Descripcion del Home, test"
+          />
+        </Helmet>
+      )}
       <div id="sidebar">
         <h1>Main page</h1>
       </div>

@@ -10,14 +10,14 @@ export const Purchase = () => {
         <meta property="og:title" content="Main" />
         <meta
           property="og:url"
-          content="https://648ccb10b95209143f052fc5--stalwart-starburst-94ac15.netlify.app/"
+          content="https://test-gtm-prerender.netlify.app"
         />
         <meta
           property="og:image"
           content="https://boletomovil.com/baseballMovil.jpg"
         />
         <meta name="description" content="Purchase" />
-        <meta property="og:description" content="Purchase" />
+        <meta property="og:description" content="Purchase description" />
       </Helmet>
       page purchase
     </div>
