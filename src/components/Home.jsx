@@ -7,6 +7,12 @@ const images = [
   "https://boletomovil.s3.amazonaws.com/event-images/mobile_1682443518651",
 ];
 
+const tickets = [
+  { price: 20, seat: 1, zone: "Superior 1" },
+  { price: 30, seat: 2, zone: "Superior 2" },
+  { price: 50, seat: 3, zone: "Superior 3" },
+];
+
 export const Home = () => {
   const [selectedImage, setSelectedImage] = useState("");
 
@@ -20,6 +26,34 @@ export const Home = () => {
     const imageIndex = selectRandomImage(0, 2);
     setSelectedImage(images[imageIndex]);
   }, []);
+
+  const onPurchase = () => {
+    window.dataLayer.push({ ecommerce: null });
+    window.dataLayer.push({
+      event: "purchaseSeats",
+      ecommerce: {
+        value: 100,
+        currency: "MXN",
+        items: [
+          {
+            item_name: "Asiento 1, zona Superior 1",
+            price: 20,
+            currency: "MXN",
+          },
+          {
+            item_name: "Asiento 2, zona Superior 2",
+            price: 30,
+            currency: "MXN",
+          },
+          {
+            item_name: "Asiento 3, zona Superior 3",
+            price: 50,
+            currency: "MXN",
+          },
+        ],
+      },
+    });
+  };
 
   return (
     <>
@@ -38,6 +72,28 @@ export const Home = () => {
       )}
       <div id="sidebar">
         <h1>Main page</h1>
+        <h1>Seats</h1>
+        <div>
+          {tickets.map((ticket) => (
+            <div
+              key={ticket.zone}
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                marginTop: "30px",
+              }}
+            >
+              <label>Asiento: {ticket.seat}</label>
+              <label>Zone: {ticket.zone}</label>
+              <label>Precio: ${ticket.price}</label>
+            </div>
+          ))}
+        </div>
+        <div style={{ marginTop: "50px" }}>
+          <button type="button" onClick={onPurchase}>
+            Comprar
+          </button>
+        </div>
       </div>
       <div id="detail"></div>
     </>
