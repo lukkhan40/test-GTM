@@ -30,7 +30,7 @@ export const Home = () => {
   const onPurchase = () => {
     window.dataLayer.push({ ecommerce: null });
     window.dataLayer.push({
-      event: "purchase",
+      event: "purchaseTest2",
       ecommerce: {
         value: 100,
         currency: "MXN",
