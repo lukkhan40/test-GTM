@@ -54,7 +54,7 @@ export const Home = () => {
     //   },
     // });
     if (window.dataLayer)
-      dataLayer.push({
+      window.dataLayer.push({
         'event': 'purchaseTest3',
         'ecommerce': {
           'purchase': {
