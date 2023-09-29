@@ -28,51 +28,51 @@ export const Home = () => {
   }, []);
 
   const onPurchase = () => {
-    // window.dataLayer.push({ ecommerce: null });
-    // window.dataLayer.push({
-    //   event: "purchaseTest3",
-    //   ecommerce: {
-    //     value: 100,
-    //     currency: "MXN",
-    //     items: [
-    //       {
-    //         item_name: "Asiento 1, zona Superior 1",
-    //         price: 20,
-    //         currency: "MXN",
-    //       },
-    //       {
-    //         item_name: "Asiento 2, zona Superior 2",
-    //         price: 30,
-    //         currency: "MXN",
-    //       },
-    //       {
-    //         item_name: "Asiento 3, zona Superior 3",
-    //         price: 50,
-    //         currency: "MXN",
-    //       },
-    //     ],
-    //   },
-    // });
-    if (window.dataLayer)
-      window.dataLayer.push({
-        'event': 'purchaseTest3',
-        'ecommerce': {
-          'purchase': {
-            'transaction_id': '12345',   // ID único de la transacción
-            'value': 100.00,             // Valor total de la compra
-            'currency': 'MXN',           // Moneda de la compra
-            'items': [
-              {
-                'item_id': 'SKU123',      // ID único del producto
-                'item_name': 'Producto A',// Nombre del producto
-                'quantity': 2,            // Cantidad de productos comprados
-                'price': 50.00            // Precio unitario del producto
-              }
-              // Puedes agregar más objetos de 'items' para otros productos comprados si es necesario.
-            ]
-          }
-        }
-      });
+    window.dataLayer.push({ ecommerce: null });
+    window.dataLayer.push({
+      event: "purchase",
+      ecommerce: {
+        value: 300,
+        currency: "MXN",
+        items: [
+          {
+            item_name: "Asiento 4, zona Superior 1",
+            price: 100,
+            currency: "MXN",
+          },
+          {
+            item_name: "Asiento 5, zona Superior 2",
+            price: 100,
+            currency: "MXN",
+          },
+          {
+            item_name: "Asiento 6, zona Superior 3",
+            price: 100,
+            currency: "MXN",
+          },
+        ],
+      },
+    });
+    // if (window.dataLayer)
+    //   window.dataLayer.push({
+    //     'event': 'purchaseTest3',
+    //     'ecommerce': {
+    //       'purchase': {
+    //         'transaction_id': '12345',   // ID único de la transacción
+    //         'value': 100.00,             // Valor total de la compra
+    //         'currency': 'MXN',           // Moneda de la compra
+    //         'items': [
+    //           {
+    //             'item_id': 'SKU123',      // ID único del producto
+    //             'item_name': 'Producto A',// Nombre del producto
+    //             'quantity': 2,            // Cantidad de productos comprados
+    //             'price': 50.00            // Precio unitario del producto
+    //           }
+    //           // Puedes agregar más objetos de 'items' para otros productos comprados si es necesario.
+    //         ]
+    //       }
+    //     }
+    //   });
 
   };
 
@@ -112,7 +112,7 @@ export const Home = () => {
         </div>
         <div style={{ marginTop: "50px" }}>
           <button type="button" onClick={onPurchase}>
-            Comprar
+            Comprar $300
           </button>
         </div>
       </div>
