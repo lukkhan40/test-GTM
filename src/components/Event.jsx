@@ -31,7 +31,7 @@ export const Event = () => {
       </form>
       <div style={{ marginTop: "10px" }}>
         <input value={inputValue} onChange={onChange} />
-        <button>OK button</button>
+        <button onClick={okButton}>OK button</button>
       </div>
       <div style={{ marginTop: "10px" }}><input placeholder="simpleInput" /></div>
     </div>
